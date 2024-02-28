@@ -9,7 +9,7 @@ let package = Package(
     products: [
         .library(
             name: "Modules",
-            targets: ["WorkoutPlayer"]
+            targets: ["WorkoutPlayer", "Profile"]
         ),
         .library(
             name: "Payment",
@@ -41,6 +41,14 @@ let package = Package(
         .testTarget(
             name: "PaymentTests",
             dependencies: ["Payment"]
+        ),
+        .target(
+            name: "Profile",
+            dependencies: ["WorkoutsCore"]
+        ),
+        .testTarget(
+            name: "ProfileTests",
+            dependencies: ["Profile"]
         ),
     ]
 )

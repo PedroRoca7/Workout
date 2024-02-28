@@ -1,18 +1,27 @@
 import SwiftUI
 import WorkoutsCore
-import Payment
 
-struct ProfileView: View {
+public struct ProfileView<PaywallView: View>: View {
     @ObservedObject
-    var subscriptionManager: SubscriptionManager
+    private var subscriptionManager: SubscriptionManager
 
     @State
     private var isShowingPaywall = false
 
     @State
     private var isShowingUnsubscribeAlert = false
+    
+    private let makePaywallView: (_ didFinishPurchase: @escaping() -> Void) -> PaywallView
 
-    var body: some View {
+    public init(
+        subscriptionManager: SubscriptionManager,
+        makePaywallView: @escaping (_ didFinishPurchase: @escaping() -> Void) -> PaywallView
+    ) {
+        self.subscriptionManager = subscriptionManager
+        self.makePaywallView = makePaywallView
+    }
+    
+    public var body: some View {
         List {
             Section {
                 HStack {
@@ -44,7 +53,9 @@ struct ProfileView: View {
         }
         .listStyle(InsetGroupedListStyle())
         .alert(isPresented: $isShowingUnsubscribeAlert, content: makeUnsubscribeAlert)
-        .sheet(isPresented: $isShowingPaywall, content: makePaywallView)
+        .sheet(isPresented: $isShowingPaywall) {
+            makePaywallView { isShowingPaywall = false }
+        }
         .navigationTitle("Profile")
         .navigationBarItems(
             trailing: Button("Logout") {}.disabled(true)
@@ -61,24 +72,23 @@ struct ProfileView: View {
             }
         )
     }
-
-    private func makePaywallView() -> some View {
-        PaywallView(
-            viewModel: .init(
-                sourceWorkout: nil,
-                trackingService: FirebaseAnalyticsPaywallTrackingService(),
-                subscriptionManager: .shared,
-                didFinishPurchase: { _ in isShowingPaywall = false }
-            )
-        )
-    }
 }
 
 #if DEBUG
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ProfileView(subscriptionManager: .shared)
+            ProfileView(
+                subscriptionManager: .shared,
+                makePaywallView: { callback in
+                    VStack {
+                        Text("Paywall View Placeholder")
+                        Button(action: callback) {
+                            Text("Complete Purchase")
+                        }
+                    }
+                }
+            )
         }
     }
 }
