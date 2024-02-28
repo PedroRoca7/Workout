@@ -22,6 +22,7 @@
 		61FC750C25E3CCF6001E5B6F /* WorkoutsService+Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FC750B25E3CCF6001E5B6F /* WorkoutsService+Live.swift */; };
 		CE7F0BB02B8F727D00F6D0CB /* Modules in Frameworks */ = {isa = PBXBuildFile; productRef = CE7F0BAF2B8F727D00F6D0CB /* Modules */; };
 		CE7F0BB22B8F8D3B00F6D0CB /* PaywallTrackingService+FirebaseAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F0BB12B8F8D3B00F6D0CB /* PaywallTrackingService+FirebaseAnalytics.swift */; };
+		CE89391C2B8FC745000DD69A /* Payment in Frameworks */ = {isa = PBXBuildFile; productRef = CE89391B2B8FC745000DD69A /* Payment */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 				CE7F0BB02B8F727D00F6D0CB /* Modules in Frameworks */,
 				6106CB7E26F16F8200A041A5 /* Kingfisher in Frameworks */,
 				6106CB7B26F16F5400A041A5 /* Moya in Frameworks */,
+				CE89391C2B8FC745000DD69A /* Payment in Frameworks */,
 				6106CB8126F16FF100A041A5 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +171,7 @@
 				6106CB7D26F16F8200A041A5 /* Kingfisher */,
 				6106CB8026F16FF100A041A5 /* FirebaseAnalytics */,
 				CE7F0BAF2B8F727D00F6D0CB /* Modules */,
+				CE89391B2B8FC745000DD69A /* Payment */,
 			);
 			productName = Workouts;
 			productReference = 61FC74D025E3CB6E001E5B6F /* Workouts.app */;
@@ -472,6 +475,10 @@
 		CE7F0BAF2B8F727D00F6D0CB /* Modules */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Modules;
+		};
+		CE89391B2B8FC745000DD69A /* Payment */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Payment;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
