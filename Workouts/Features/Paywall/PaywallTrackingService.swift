@@ -1,4 +1,5 @@
 import Foundation
+import WorkoutsCore
 
 struct PaywallTrackingService {
     var trackView: (Workout?) -> Void
