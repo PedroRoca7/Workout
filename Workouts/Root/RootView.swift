@@ -1,0 +1,38 @@
+import SwiftUI
+
+struct RootView: View {
+    var body: some View {
+        TabView {
+            workoutsTab
+            settingsTab
+        }
+    }
+
+    private var workoutsTab: some View {
+        NavigationView {
+            WorkoutsView(viewModel: .init(service: .live))
+        }
+        .tabItem {
+            Text("Workouts")
+            Image(systemName: "bolt.heart")
+        }
+    }
+
+    private var settingsTab: some View {
+        NavigationView {
+            ProfileView(subscriptionManager: .shared)
+        }
+        .tabItem {
+            Text("Profile")
+            Image(systemName: "person.circle")
+        }
+    }
+}
+
+#if DEBUG
+struct RootView_Previews: PreviewProvider {
+    static var previews: some View {
+        RootView()
+    }
+}
+#endif
