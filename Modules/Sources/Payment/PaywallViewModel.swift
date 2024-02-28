@@ -2,15 +2,15 @@ import Combine
 import Foundation
 import WorkoutsCore
 
-final class PaywallViewModel: ObservableObject {
+public final class PaywallViewModel: ObservableObject {
     private let sourceWorkout: Workout?
     private let trackingService: PaywallTrackingService
     private let subscriptionManager: SubscriptionManager
     private let didFinishPurchase: (Workout?) -> Void
-
+    
     @Published private(set) var isLoading = false
-
-    init(
+    
+    public init(
         sourceWorkout: Workout?,
         trackingService: PaywallTrackingService,
         subscriptionManager: SubscriptionManager,
@@ -21,25 +21,25 @@ final class PaywallViewModel: ObservableObject {
         self.subscriptionManager = subscriptionManager
         self.didFinishPurchase = didFinishPurchase
     }
-
+    
     func handleOnAppear() {
-        trackingService.trackView(sourceWorkout)
+        trackingService.trackView(workout: sourceWorkout)
     }
-
+    
     func buyButtonTapped() {
         isLoading = true
-
+        
         // add a delay to pretend we're making a real request
         DispatchQueue.main.asyncAfter(
             deadline: .now() + 1,
             execute: finishSubscription
         )
     }
-
+    
     private func finishSubscription() {
         isLoading = false
         subscriptionManager.isSubscriber = true
-        trackingService.trackPurchase(sourceWorkout)
+        trackingService.trackPurchase(workout: sourceWorkout)
         didFinishPurchase(sourceWorkout)
     }
 }

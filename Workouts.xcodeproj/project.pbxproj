@@ -11,10 +11,6 @@
 		6106CB7B26F16F5400A041A5 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 6106CB7A26F16F5400A041A5 /* Moya */; };
 		6106CB7E26F16F8200A041A5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6106CB7D26F16F8200A041A5 /* Kingfisher */; };
 		6106CB8126F16FF100A041A5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6106CB8026F16FF100A041A5 /* FirebaseAnalytics */; };
-		614E00A626F2C0A5005C4833 /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614E00A526F2C0A5005C4833 /* SubscriptionManager.swift */; };
-		61B23C1B266BEFF600C00F23 /* PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B23C1A266BEFF600C00F23 /* PaywallViewModel.swift */; };
-		61B23C1D266BF17A00C00F23 /* PaywallTrackingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B23C1C266BF17A00C00F23 /* PaywallTrackingService.swift */; };
-		61B23C22266BF91100C00F23 /* PaywallTrackingService+FirebaseAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B23C21266BF91100C00F23 /* PaywallTrackingService+FirebaseAnalytics.swift */; };
 		61FC74D825E3CB70001E5B6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61FC74D725E3CB70001E5B6F /* Assets.xcassets */; };
 		61FC74DB25E3CB70001E5B6F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61FC74DA25E3CB70001E5B6F /* Preview Assets.xcassets */; };
 		61FC74F625E3CB8D001E5B6F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FC74E625E3CB8D001E5B6F /* ProfileView.swift */; };
@@ -26,14 +22,11 @@
 		61FC750025E3CB8D001E5B6F /* WorkoutsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FC74F525E3CB8D001E5B6F /* WorkoutsService.swift */; };
 		61FC750C25E3CCF6001E5B6F /* WorkoutsService+Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FC750B25E3CCF6001E5B6F /* WorkoutsService+Live.swift */; };
 		CE7F0BB02B8F727D00F6D0CB /* Modules in Frameworks */ = {isa = PBXBuildFile; productRef = CE7F0BAF2B8F727D00F6D0CB /* Modules */; };
+		CE7F0BB22B8F8D3B00F6D0CB /* PaywallTrackingService+FirebaseAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F0BB12B8F8D3B00F6D0CB /* PaywallTrackingService+FirebaseAnalytics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6106CB7726F167FA00A041A5 /* WorkoutDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetail.swift; sourceTree = "<group>"; };
-		614E00A526F2C0A5005C4833 /* SubscriptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionManager.swift; sourceTree = "<group>"; };
-		61B23C1A266BEFF600C00F23 /* PaywallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallViewModel.swift; sourceTree = "<group>"; };
-		61B23C1C266BF17A00C00F23 /* PaywallTrackingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallTrackingService.swift; sourceTree = "<group>"; };
-		61B23C21266BF91100C00F23 /* PaywallTrackingService+FirebaseAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaywallTrackingService+FirebaseAnalytics.swift"; sourceTree = "<group>"; };
 		61FC74D025E3CB6E001E5B6F /* Workouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61FC74D725E3CB70001E5B6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61FC74DA25E3CB70001E5B6F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -47,6 +40,7 @@
 		61FC74F525E3CB8D001E5B6F /* WorkoutsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsService.swift; sourceTree = "<group>"; };
 		61FC750B25E3CCF6001E5B6F /* WorkoutsService+Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkoutsService+Live.swift"; sourceTree = "<group>"; };
 		CE7F0BAE2B8F713D00F6D0CB /* Modules */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Modules; sourceTree = "<group>"; };
+		CE7F0BB12B8F8D3B00F6D0CB /* PaywallTrackingService+FirebaseAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaywallTrackingService+FirebaseAnalytics.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +79,7 @@
 		61FC74D225E3CB6E001E5B6F /* Workouts */ = {
 			isa = PBXGroup;
 			children = (
-				61FC74F325E3CB8D001E5B6F /* Core */,
+				CE8939192B8FA930000DD69A /* Integrations */,
 				61FC74E425E3CB8D001E5B6F /* Features */,
 				61FC74F025E3CB8D001E5B6F /* Root */,
 				61FC74D725E3CB70001E5B6F /* Assets.xcassets */,
@@ -108,7 +102,6 @@
 			children = (
 				61FC74E525E3CB8D001E5B6F /* Profile */,
 				61FC74E725E3CB8D001E5B6F /* Workouts */,
-				61FC74EE25E3CB8D001E5B6F /* Paywall */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -134,16 +127,6 @@
 			path = Workouts;
 			sourceTree = "<group>";
 		};
-		61FC74EE25E3CB8D001E5B6F /* Paywall */ = {
-			isa = PBXGroup;
-			children = (
-				61B23C21266BF91100C00F23 /* PaywallTrackingService+FirebaseAnalytics.swift */,
-				61B23C1C266BF17A00C00F23 /* PaywallTrackingService.swift */,
-				61B23C1A266BEFF600C00F23 /* PaywallViewModel.swift */,
-			);
-			path = Paywall;
-			sourceTree = "<group>";
-		};
 		61FC74F025E3CB8D001E5B6F /* Root */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,19 +136,27 @@
 			path = Root;
 			sourceTree = "<group>";
 		};
-		61FC74F325E3CB8D001E5B6F /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				614E00A526F2C0A5005C4833 /* SubscriptionManager.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
 		61FC750425E3CC31001E5B6F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE8939192B8FA930000DD69A /* Integrations */ = {
+			isa = PBXGroup;
+			children = (
+				CE89391A2B8FA938000DD69A /* Firebase */,
+			);
+			path = Integrations;
+			sourceTree = "<group>";
+		};
+		CE89391A2B8FA938000DD69A /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				CE7F0BB12B8F8D3B00F6D0CB /* PaywallTrackingService+FirebaseAnalytics.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,11 +244,8 @@
 				61FC74F925E3CB8D001E5B6F /* WorkoutsViewModel.swift in Sources */,
 				61FC750025E3CB8D001E5B6F /* WorkoutsService.swift in Sources */,
 				61FC74FA25E3CB8D001E5B6F /* WorkoutCard.swift in Sources */,
-				61B23C1B266BEFF600C00F23 /* PaywallViewModel.swift in Sources */,
-				61B23C1D266BF17A00C00F23 /* PaywallTrackingService.swift in Sources */,
-				61B23C22266BF91100C00F23 /* PaywallTrackingService+FirebaseAnalytics.swift in Sources */,
-				614E00A626F2C0A5005C4833 /* SubscriptionManager.swift in Sources */,
 				6106CB7826F167FA00A041A5 /* WorkoutDetail.swift in Sources */,
+				CE7F0BB22B8F8D3B00F6D0CB /* PaywallTrackingService+FirebaseAnalytics.swift in Sources */,
 				61FC74F625E3CB8D001E5B6F /* ProfileView.swift in Sources */,
 				61FC74F825E3CB8D001E5B6F /* WorkoutsView.swift in Sources */,
 				61FC74FE25E3CB8D001E5B6F /* WorkoutsApp.swift in Sources */,
