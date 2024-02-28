@@ -1,4 +1,6 @@
 import SwiftUI
+import WorkoutsCore
+import Payment
 
 struct ProfileView: View {
     @ObservedObject
@@ -64,7 +66,7 @@ struct ProfileView: View {
         PaywallView(
             viewModel: .init(
                 sourceWorkout: nil,
-                trackingService: .firebaseAnalytics,
+                trackingService: FirebaseAnalyticsPaywallTrackingService(),
                 subscriptionManager: .shared,
                 didFinishPurchase: { _ in isShowingPaywall = false }
             )
