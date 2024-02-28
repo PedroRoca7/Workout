@@ -29,5 +29,13 @@ let package = Package(
             name: "WorkoutPlayerTests",
             dependencies: ["WorkoutPlayer"]
         ),
+        .target(
+            name: "Payment",
+            dependencies: ["WorkoutsCore"]
+        ),
+        .testTarget(
+            name: "PaymentTests",
+            dependencies: ["Payment"]
+        ),
     ]
 )

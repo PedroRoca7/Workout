@@ -21,7 +21,6 @@
 		61FC74F825E3CB8D001E5B6F /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FC74E925E3CB8D001E5B6F /* WorkoutsView.swift */; };
 		61FC74F925E3CB8D001E5B6F /* WorkoutsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FC74EA25E3CB8D001E5B6F /* WorkoutsViewModel.swift */; };
 		61FC74FA25E3CB8D001E5B6F /* WorkoutCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FC74EB25E3CB8D001E5B6F /* WorkoutCard.swift */; };
-		61FC74FC25E3CB8D001E5B6F /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FC74EF25E3CB8D001E5B6F /* PaywallView.swift */; };
 		61FC74FD25E3CB8D001E5B6F /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FC74F125E3CB8D001E5B6F /* RootView.swift */; };
 		61FC74FE25E3CB8D001E5B6F /* WorkoutsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FC74F225E3CB8D001E5B6F /* WorkoutsApp.swift */; };
 		61FC750025E3CB8D001E5B6F /* WorkoutsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FC74F525E3CB8D001E5B6F /* WorkoutsService.swift */; };
@@ -43,7 +42,6 @@
 		61FC74E925E3CB8D001E5B6F /* WorkoutsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
 		61FC74EA25E3CB8D001E5B6F /* WorkoutsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsViewModel.swift; sourceTree = "<group>"; };
 		61FC74EB25E3CB8D001E5B6F /* WorkoutCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutCard.swift; sourceTree = "<group>"; };
-		61FC74EF25E3CB8D001E5B6F /* PaywallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		61FC74F125E3CB8D001E5B6F /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		61FC74F225E3CB8D001E5B6F /* WorkoutsApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsApp.swift; sourceTree = "<group>"; };
 		61FC74F525E3CB8D001E5B6F /* WorkoutsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsService.swift; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 			children = (
 				61B23C21266BF91100C00F23 /* PaywallTrackingService+FirebaseAnalytics.swift */,
 				61B23C1C266BF17A00C00F23 /* PaywallTrackingService.swift */,
-				61FC74EF25E3CB8D001E5B6F /* PaywallView.swift */,
 				61B23C1A266BEFF600C00F23 /* PaywallViewModel.swift */,
 			);
 			path = Paywall;
@@ -253,7 +250,6 @@
 			files = (
 				61FC750C25E3CCF6001E5B6F /* WorkoutsService+Live.swift in Sources */,
 				61FC74FD25E3CB8D001E5B6F /* RootView.swift in Sources */,
-				61FC74FC25E3CB8D001E5B6F /* PaywallView.swift in Sources */,
 				61FC74F925E3CB8D001E5B6F /* WorkoutsViewModel.swift in Sources */,
 				61FC750025E3CB8D001E5B6F /* WorkoutsService.swift in Sources */,
 				61FC74FA25E3CB8D001E5B6F /* WorkoutCard.swift in Sources */,
