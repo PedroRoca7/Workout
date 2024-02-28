@@ -64,7 +64,6 @@
 				CE7F0BAE2B8F713D00F6D0CB /* Modules */,
 				61FC74D225E3CB6E001E5B6F /* Workouts */,
 				61FC74D125E3CB6E001E5B6F /* Products */,
-				61FC750425E3CC31001E5B6F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,13 +124,6 @@
 				61FC74F225E3CB8D001E5B6F /* WorkoutsApp.swift */,
 			);
 			path = Root;
-			sourceTree = "<group>";
-		};
-		61FC750425E3CC31001E5B6F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CE8939192B8FA930000DD69A /* Integrations */ = {
