@@ -53,6 +53,7 @@
 		61FC74F425E3CB8D001E5B6F /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		61FC74F525E3CB8D001E5B6F /* WorkoutsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsService.swift; sourceTree = "<group>"; };
 		61FC750B25E3CCF6001E5B6F /* WorkoutsService+Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkoutsService+Live.swift"; sourceTree = "<group>"; };
+		CE7F0BAE2B8F713D00F6D0CB /* Modules */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Modules; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +81,7 @@
 		61FC74C725E3CB6E001E5B6F = {
 			isa = PBXGroup;
 			children = (
+				CE7F0BAE2B8F713D00F6D0CB /* Modules */,
 				61FC74D225E3CB6E001E5B6F /* Workouts */,
 				61FC74D125E3CB6E001E5B6F /* Products */,
 				61FC750425E3CC31001E5B6F /* Frameworks */,
