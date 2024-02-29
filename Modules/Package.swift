@@ -9,11 +9,19 @@ let package = Package(
     products: [
         .library(
             name: "Modules",
-            targets: ["WorkoutPlayer", "Profile"]
+            targets: ["WorkoutPlayer"]
         ),
         .library(
             name: "Payment",
             targets: ["Payment"]
+        ),
+        .library(
+            name: "Profile",
+            targets: ["Profile"]
+        ),
+        .library(
+            name: "BrowseWorkouts",
+            targets: ["BrowseWorkouts"]
         ),
     ],
     dependencies: [],
@@ -49,6 +57,14 @@ let package = Package(
         .testTarget(
             name: "ProfileTests",
             dependencies: ["Profile"]
+        ),
+        .target(
+            name: "BrowseWorkouts",
+            dependencies: ["WorkoutsCore"]
+        ),
+        .testTarget(
+            name: "BrowseWorkoutsTests",
+            dependencies: ["BrowseWorkouts"]
         ),
     ]
 )
