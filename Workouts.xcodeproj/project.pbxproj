@@ -19,6 +19,7 @@
 		CE89391C2B8FC745000DD69A /* Payment in Frameworks */ = {isa = PBXBuildFile; productRef = CE89391B2B8FC745000DD69A /* Payment */; };
 		CE8939242B90E7BE000DD69A /* Profile in Frameworks */ = {isa = PBXBuildFile; productRef = CE8939232B90E7BE000DD69A /* Profile */; };
 		CE8939262B90E7C2000DD69A /* BrowseWorkouts in Frameworks */ = {isa = PBXBuildFile; productRef = CE8939252B90E7C2000DD69A /* BrowseWorkouts */; };
+		CE8939282B90F696000DD69A /* Composer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8939272B90F696000DD69A /* Composer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		61FC750B25E3CCF6001E5B6F /* WorkoutsService+Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorkoutsService+Live.swift"; sourceTree = "<group>"; };
 		CE7F0BAE2B8F713D00F6D0CB /* Modules */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Modules; sourceTree = "<group>"; };
 		CE7F0BB12B8F8D3B00F6D0CB /* PaywallTrackingService+FirebaseAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaywallTrackingService+FirebaseAnalytics.swift"; sourceTree = "<group>"; };
+		CE8939272B90F696000DD69A /* Composer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			children = (
 				61FC74F125E3CB8D001E5B6F /* RootView.swift */,
 				61FC74F225E3CB8D001E5B6F /* WorkoutsApp.swift */,
+				CE8939272B90F696000DD69A /* Composer.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8939282B90F696000DD69A /* Composer.swift in Sources */,
 				61FC750C25E3CCF6001E5B6F /* WorkoutsService+Live.swift in Sources */,
 				61FC74FD25E3CB8D001E5B6F /* RootView.swift in Sources */,
 				CE7F0BB22B8F8D3B00F6D0CB /* PaywallTrackingService+FirebaseAnalytics.swift in Sources */,
