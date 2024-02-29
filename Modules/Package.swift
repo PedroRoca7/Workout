@@ -24,7 +24,11 @@ let package = Package(
             targets: ["BrowseWorkouts"]
         ),
     ],
-    dependencies: [],
+    dependencies: [
+        .package(
+            url: "https://github.com/onevcat/Kingfisher.git",
+            from: "6.3.1")
+    ],
     targets: [
         .target(
             name: "WorkoutsCore",
@@ -60,7 +64,7 @@ let package = Package(
         ),
         .target(
             name: "BrowseWorkouts",
-            dependencies: ["WorkoutsCore"]
+            dependencies: ["WorkoutsCore", "Kingfisher"]
         ),
         .testTarget(
             name: "BrowseWorkoutsTests",

@@ -1,10 +1,21 @@
 import SwiftUI
+import WorkoutsCore
 
-struct WorkoutsView: View {
+public struct WorkoutsView<WorkoutDetail: View>: View {
     @ObservedObject
     var viewModel: WorkoutsViewModel
-
-    var body: some View {
+    
+    let makeWorkoutDetail: (Workout) -> WorkoutDetail
+    
+    public init(
+        viewModel: WorkoutsViewModel,
+        makeWorkoutDetail: @escaping (Workout) -> WorkoutDetail
+    ) {
+        self.viewModel = viewModel
+        self.makeWorkoutDetail = makeWorkoutDetail
+    }
+    
+    public var body: some View {
         List {
             if viewModel.state.isLoading {
                 workoutsSection
@@ -19,7 +30,7 @@ struct WorkoutsView: View {
         .onAppear(perform: viewModel.reload)
         .background(detailNavLink)
     }
-
+    
     private var workoutsSection: some View {
         Section(header: Text("Chose your workout:").bold()) {
             ForEach(viewModel.state.workouts) { workout in
@@ -29,10 +40,10 @@ struct WorkoutsView: View {
             }
         }
     }
-
+    
     private var detailNavLink: some View {
         NavigationLink(
-            destination: viewModel.state.selected.map(WorkoutDetail.init),
+            destination: viewModel.state.selected.map(makeWorkoutDetail),
             isActive: .init(
                 get: { viewModel.state.selected != nil },
                 set: { isActive in
@@ -50,24 +61,26 @@ struct WorkoutsView: View {
 struct WorkoutsView_Previews: PreviewProvider {
     private struct Preview: View {
         @ObservedObject var viewModel: WorkoutsViewModel
-
+        
         init(service: WorkoutsService) {
             viewModel = .init(service: service)
         }
-
+        
         var body: some View {
             NavigationView {
-                WorkoutsView(viewModel: viewModel)
+                WorkoutsView(viewModel: viewModel) { workout in
+                    Text(String(describing: workout))
+                }
             }
         }
     }
-
+    
     static var previews: some View {
         Group {
             Preview(service: .loading)
-
+            
             Preview(service: .happyPath)
-
+            
             Preview(service: .happyPath)
                 .preferredColorScheme(.dark)
         }
